@@ -11,7 +11,7 @@ terraform {
 }
 
 resource "aws_iam_role" "lambda_execution_role" {
-  name = "lambda_pedido_execution_role"
+  name = "lambda_cliente_execution_role"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
@@ -58,7 +58,7 @@ resource "aws_iam_role_policy_attachment" "lambda_execution_policy" {
 }
 
 resource "aws_lambda_function" "cliente_function" {
-  function_name = "lambda_pedido_function"
+  function_name = "lambda_cliente_function"
   role          = aws_iam_role.lambda_execution_role.arn
   runtime       = "dotnet8"
   memory_size   = 512

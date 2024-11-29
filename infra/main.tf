@@ -4,7 +4,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "grupo12-fiap-teste "
+    bucket = "terraform-tfstate-grupo12-fiap-2024-cliente"
     key    = "lambda_cliente/terraform.tfstate"
     region = "us-east-1"
   }
@@ -44,7 +44,8 @@ resource "aws_iam_policy" "lambda_policy" {
           "dynamodb:PutItem",
           "dynamodb:Query",
           "dynamodb:Scan",
-          "dynamodb:UpdateItem"
+          "dynamodb:UpdateItem",
+          "dynamodb:DescribeTable"
         ]
         Resource = "*"
       }

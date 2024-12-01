@@ -64,7 +64,7 @@ resource "aws_lambda_function" "cliente_function" {
   runtime       = "dotnet8"
   memory_size   = 512
   timeout       = 30
-  handler       = "FIAP.TechChallenge.LambdaCliente.Api::FIAP.TechChallenge.LambdaCliente.Api.Functions::AssemblyName"
+  handler       = "FIAP.TechChallenge.LambdaCliente.Api::FIAP.TechChallenge.LambdaCliente.Api.Function_Handler_Generated::Handler"
   # Código armazenado no S3
   s3_bucket = "code-lambdas-functions"
   s3_key    = "lambda_cliente_function.zip"
@@ -82,6 +82,6 @@ resource "aws_dynamodb_table" "cliente_table" {
   }
 
   tags = {
-    Team = "Grupo12TechChallengeCliente"
+    Team = "Grupo12TechChallenge"
   }
 }

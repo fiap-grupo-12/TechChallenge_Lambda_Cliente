@@ -2,17 +2,18 @@
 using FIAP.TechChallenge.LambdaCliente.Application.UseCases.Interfaces;
 using FIAP.TechChallenge.LambdaCliente.Domain.Repositories;
 using FIAP.TechChallenge.LambdaCliente.Domain.Entities;
+using AutoMapper;
+using FIAP.TechChallenge.LambdaCliente.Application.Models.Response;
 
 namespace FIAP.TechChallenge.LambdaCliente.Application.UseCases;
 
-public class CriarClienteUseCase : ICriarClienteUseCase
+public class CriarClienteUseCase(IClienteRepository clienteRepository,
+    IMapper mapper) : ICriarClienteUseCase
 {
-    private readonly IClienteRepository _clienteRepository;
+    private readonly IClienteRepository _clienteRepository = clienteRepository;
+    private readonly IMapper _mapper = mapper;
 
-    public CriarClienteUseCase(
-        IClienteRepository clienteRepository) => _clienteRepository = clienteRepository;
-
-    public async Task<bool> Execute(CriarClienteInput request)
+    public async Task<ClienteResponse> Execute(CriarClienteInput request)
     {
         var cliente = new Cliente()
         {
@@ -20,8 +21,9 @@ public class CriarClienteUseCase : ICriarClienteUseCase
             Nome = request.Nome,
             Email = request.Email
         };
-        await _clienteRepository.Post(cliente);
 
-        return true;
+        var result = await _clienteRepository.Post(cliente);
+
+        return _mapper.Map<ClienteResponse>(result);
     }
 }

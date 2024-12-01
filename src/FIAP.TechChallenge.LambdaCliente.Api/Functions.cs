@@ -100,7 +100,7 @@ public class Function(ICriarClienteUseCase criarClienteUseCase,
         => await _obterClientesUseCase.Execute();
 
     [HttpApi(LambdaHttpMethod.Post, "/cliente")]
-    public async Task<bool> CriarClientes([FromBody] CriarClienteRequest request)
+    public async Task<ClienteResponse> CriarClientes([FromBody] CriarClienteRequest request)
         => await _criarClienteUseCase.Execute(request.ToInput());
 
     //private async Task<APIGatewayProxyResponse?> GetResponseAsync(APIGatewayProxyRequest request,

@@ -45,18 +45,6 @@ public class ClienteRepository : IClienteRepository
         }
     }
 
-    public async Task<Cliente> GetById(int id)
-    {
-        try
-        {
-            return await _context.LoadAsync<Cliente>(id);
-        }
-        catch (Exception ex)
-        {
-            throw new Exception($"Erro ao consultar cliente. {ex}");
-        }
-    }
-
     public async Task<Cliente> Post(Cliente cliente)
     {
         try

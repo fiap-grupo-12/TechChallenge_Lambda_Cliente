@@ -6,9 +6,11 @@ using FIAP.TechChallenge.LambdaCliente.Application.UseCases;
 using FIAP.TechChallenge.LambdaCliente.Application.UseCases.Interfaces;
 using FIAP.TechChallenge.LambdaCliente.Domain.Repositories;
 using FIAP.TechChallenge.LambdaCliente.Infra.Configurations;
+using System.Diagnostics.CodeAnalysis;
 
 namespace FIAP.TechChallenge.LambdaCliente.Api.Extensions;
 
+[ExcludeFromCodeCoverage]
 public static class DependencyInjection
 {
     public static void AddProjectDependencies(this IServiceCollection services)

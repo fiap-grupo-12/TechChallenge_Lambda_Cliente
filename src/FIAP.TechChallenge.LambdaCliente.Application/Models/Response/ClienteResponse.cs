@@ -1,5 +1,8 @@
-﻿namespace FIAP.TechChallenge.LambdaCliente.Application.Models.Response;
+﻿using System.Diagnostics.CodeAnalysis;
 
+namespace FIAP.TechChallenge.LambdaCliente.Application.Models.Response;
+
+[ExcludeFromCodeCoverage]
 public class ClienteResponse
 {
     public Guid Id { get; set; }

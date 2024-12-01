@@ -1,0 +1,76 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FIAP.TechChallenge.LambdaCliente.Api", "FIAP.TechChallenge.LambdaCliente.Api\FIAP.TechChallenge.LambdaCliente.Api.csproj", "{C7081296-F4FB-4ACA-AB03-F525C55EF921}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens de Solução", "{323D9AE1-AAF1-4F39-A7EF-2323CF201A3A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FIAP.TechChallenge.LambdaCliente.Domain", "FIAP.TechChallenge.LambdaCliente.Domain\FIAP.TechChallenge.LambdaCliente.Domain.csproj", "{E662D5B5-1A54-4DA1-B3DF-AEDBAED16F16}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FIAP.TechChallenge.LambdaCliente.Application", "FIAP.TechChallenge.LambdaCliente.Application\FIAP.TechChallenge.LambdaCliente.Application.csproj", "{D3F97CDE-25B6-4221-8A54-89325FE907E5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FIAP.TechChallenge.LambdaCliente.Infra", "FIAP.TechChallenge.LambdaCliente.Infra\FIAP.TechChallenge.LambdaCliente.Infra.csproj", "{4AD704EC-7C07-4ABE-A0FF-F25B977BFED4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{523FA43A-8F8E-4E17-BF05-BDF30B956E39}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7E650A46-797C-451B-A0E7-9ABEC5EE15AC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FIAP.TechChallenge.LambdaCliente.FunctionalTests", "..\tests\FIAP.TechChallenge.LambdaCliente.FunctionalTests\FIAP.TechChallenge.LambdaCliente.FunctionalTests.csproj", "{A93B9B4C-A22D-47D1-B735-4501E1C2BF00}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FIAP.TechChallenge.LambdaCliente.IntegrationTests", "..\tests\FIAP.TechChallenge.LambdaCliente.IntegrationTests\FIAP.TechChallenge.LambdaCliente.IntegrationTests.csproj", "{95C12337-C231-4136-866B-93850D5B86AC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FIAP.TechChallenge.LambdaCliente.UnitTests", "..\tests\FIAP.TechChallenge.LambdaCliente.UnitTests\FIAP.TechChallenge.LambdaCliente.UnitTests.csproj", "{74BB4B72-05BB-4357-831A-E356116FEDF0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C7081296-F4FB-4ACA-AB03-F525C55EF921}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7081296-F4FB-4ACA-AB03-F525C55EF921}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7081296-F4FB-4ACA-AB03-F525C55EF921}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7081296-F4FB-4ACA-AB03-F525C55EF921}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E662D5B5-1A54-4DA1-B3DF-AEDBAED16F16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E662D5B5-1A54-4DA1-B3DF-AEDBAED16F16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E662D5B5-1A54-4DA1-B3DF-AEDBAED16F16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E662D5B5-1A54-4DA1-B3DF-AEDBAED16F16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3F97CDE-25B6-4221-8A54-89325FE907E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3F97CDE-25B6-4221-8A54-89325FE907E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3F97CDE-25B6-4221-8A54-89325FE907E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3F97CDE-25B6-4221-8A54-89325FE907E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AD704EC-7C07-4ABE-A0FF-F25B977BFED4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AD704EC-7C07-4ABE-A0FF-F25B977BFED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AD704EC-7C07-4ABE-A0FF-F25B977BFED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AD704EC-7C07-4ABE-A0FF-F25B977BFED4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A93B9B4C-A22D-47D1-B735-4501E1C2BF00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A93B9B4C-A22D-47D1-B735-4501E1C2BF00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A93B9B4C-A22D-47D1-B735-4501E1C2BF00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A93B9B4C-A22D-47D1-B735-4501E1C2BF00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95C12337-C231-4136-866B-93850D5B86AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95C12337-C231-4136-866B-93850D5B86AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95C12337-C231-4136-866B-93850D5B86AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95C12337-C231-4136-866B-93850D5B86AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74BB4B72-05BB-4357-831A-E356116FEDF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74BB4B72-05BB-4357-831A-E356116FEDF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74BB4B72-05BB-4357-831A-E356116FEDF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74BB4B72-05BB-4357-831A-E356116FEDF0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C7081296-F4FB-4ACA-AB03-F525C55EF921} = {7E650A46-797C-451B-A0E7-9ABEC5EE15AC}
+		{E662D5B5-1A54-4DA1-B3DF-AEDBAED16F16} = {7E650A46-797C-451B-A0E7-9ABEC5EE15AC}
+		{D3F97CDE-25B6-4221-8A54-89325FE907E5} = {7E650A46-797C-451B-A0E7-9ABEC5EE15AC}
+		{4AD704EC-7C07-4ABE-A0FF-F25B977BFED4} = {7E650A46-797C-451B-A0E7-9ABEC5EE15AC}
+		{A93B9B4C-A22D-47D1-B735-4501E1C2BF00} = {523FA43A-8F8E-4E17-BF05-BDF30B956E39}
+		{95C12337-C231-4136-866B-93850D5B86AC} = {523FA43A-8F8E-4E17-BF05-BDF30B956E39}
+		{74BB4B72-05BB-4357-831A-E356116FEDF0} = {523FA43A-8F8E-4E17-BF05-BDF30B956E39}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DD8703B2-4CD9-43AE-BD4A-E60EAF6BA983}
+	EndGlobalSection
+EndGlobal

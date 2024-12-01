@@ -8,7 +8,5 @@
   "profile": "default",
   "region": "us-east-1",
   "configuration": "Release",
-  "template": "serverless.template",
-  "template-parameters": "",
-  "docker-host-build-output-dir": "./bin/Release/lambda-publish"
+  "template": "serverless.template"
 }

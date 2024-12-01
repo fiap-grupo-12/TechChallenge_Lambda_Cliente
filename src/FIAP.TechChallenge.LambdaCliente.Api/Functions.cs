@@ -91,7 +91,7 @@ public class Function(ICriarClienteUseCase criarClienteUseCase,
         return null;
     }
 
-    [HttpApi(LambdaHttpMethod.Get, "/ObterClientePorCPF")]
+    [HttpApi(LambdaHttpMethod.Get, "/Cliente/{cpf}")]
     public async Task<ClienteResponse> ObterClientePorCpf(string cpf)
         => await _obterClientePorCpfUseCase.Execute(cpf);
 
@@ -99,7 +99,7 @@ public class Function(ICriarClienteUseCase criarClienteUseCase,
     public async Task<IList<ClienteResponse>> ObterTodosOsClientes()
         => await _obterClientesUseCase.Execute();
 
-    [HttpApi(LambdaHttpMethod.Post, "/cliente")]
+    [HttpApi(LambdaHttpMethod.Post, "/Cliente")]
     public async Task<ClienteResponse> CriarClientes([FromBody] CriarClienteRequest request)
         => await _criarClienteUseCase.Execute(request.ToInput());
 

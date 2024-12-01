@@ -1,9 +1,11 @@
 ﻿using FIAP.TechChallenge.LambdaCliente.Application.Models.Input;
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 using System.Text.Json.Serialization;
 
 namespace FIAP.TechChallenge.LambdaCliente.Api.Request
 {
+    [ExcludeFromCodeCoverage]
     public class CriarClienteRequest
     {
         [Required(ErrorMessage = "É obrigatório informar o nome.")]

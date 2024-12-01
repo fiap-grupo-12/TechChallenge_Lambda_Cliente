@@ -17,15 +17,7 @@
           "AWSLambdaBasicExecutionRole"
         ],
         "PackageType": "Zip",
-        "Handler": "FIAP.TechChallenge.LambdaCliente.Api::FIAP.TechChallenge.LambdaCliente.Api.Functions_Handler_Generated::Handler"
-      }
-    }
-  },
-  "Outputs": {
-    "ApiURL": {
-      "Description": "API endpoint URL for Prod environment",
-      "Value": {
-        "Fn::Sub": "https://${ServerlessHttpApi}.execute-api.${AWS::Region}.amazonaws.com/"
+        "Handler": "FIAP.TechChallenge.LambdaCliente.Api::FIAP.TechChallenge.LambdaCliente.Api.Function_Handler_Generated::Handler"
       }
     }
   }

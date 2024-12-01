@@ -5,10 +5,10 @@ namespace FIAP.TechChallenge.LambdaCliente.Domain.Entities;
 
 [ExcludeFromCodeCoverage]
 [DynamoDBTable("ClienteTable")]
-public class Cliente : EntityBase
+public class Cliente
 {
-    //[DynamoDBHashKey("id")]
-    //public Guid Id { get; set; }
+    [DynamoDBHashKey("id")]
+    public Guid Id { get; set; }
 
     [DynamoDBProperty("nome")]
     public string Nome { get; set; }

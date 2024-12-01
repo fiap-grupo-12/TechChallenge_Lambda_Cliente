@@ -34,8 +34,6 @@ public class ClienteRepository : IClienteRepository
                 new("cpf", Amazon.DynamoDBv2.DocumentModel.ScanOperator.Equal, cpf)
             };
 
-            //return await _context.ScanAsync<Cliente>(condition).GetRemainingAsync();
-
             var clientes = await _context.ScanAsync<Cliente>(default)
                 .GetRemainingAsync();
 
@@ -63,6 +61,7 @@ public class ClienteRepository : IClienteRepository
     {
         try
         {
+            cliente.Id = Guid.NewGuid();
             await _context.SaveAsync(cliente);
             return cliente;
         }

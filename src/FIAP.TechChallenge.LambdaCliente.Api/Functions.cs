@@ -1,7 +1,6 @@
 using Amazon.Lambda.Core;
 using Amazon.Lambda.Annotations;
 using Amazon.Lambda.Annotations.APIGateway;
-using Microsoft.AspNetCore.Mvc;
 using FromBodyAttribute = Amazon.Lambda.Annotations.APIGateway.FromBodyAttribute;
 using FIAP.TechChallenge.LambdaCliente.Api.Request;
 using FIAP.TechChallenge.LambdaCliente.Application.UseCases.Interfaces;

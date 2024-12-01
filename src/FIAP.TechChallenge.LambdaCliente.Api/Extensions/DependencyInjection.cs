@@ -25,8 +25,9 @@ public static class DependencyInjection
         services.AddSingleton(mapper);
 
         services.AddTransient<IClienteRepository, ClienteRepository>();
-
+        
         services.AddTransient<ICriarClienteUseCase, CriarClienteUseCase>();
         services.AddTransient<IObterClientesUseCase, ObterClientesUseCase>();
+        services.AddTransient<IObterClientePorCpfUseCase, ObterClientePorCpfUseCase>();
     }
 }

@@ -1,6 +1,7 @@
 name: 'Destroy API'
 
 on:
+  workflow_dispatch:
   push:
     branches: [ "destroy" ]
 

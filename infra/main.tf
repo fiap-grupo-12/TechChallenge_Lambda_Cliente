@@ -4,7 +4,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "grupo12-fiap-teste "
+    bucket = "terraform-tfstate-grupo12-fiap-2024-cliente"
     key    = "lambda_cliente/terraform.tfstate"
     region = "us-east-1"
   }
@@ -44,7 +44,8 @@ resource "aws_iam_policy" "lambda_policy" {
           "dynamodb:PutItem",
           "dynamodb:Query",
           "dynamodb:Scan",
-          "dynamodb:UpdateItem"
+          "dynamodb:UpdateItem",
+          "dynamodb:DescribeTable"
         ]
         Resource = "*"
       }
@@ -63,7 +64,7 @@ resource "aws_lambda_function" "cliente_function" {
   runtime       = "dotnet8"
   memory_size   = 512
   timeout       = 30
-  handler       = "FIAP.TechChallenge.LambdaCliente.Api::FIAP.TechChallenge.LambdaCliente.Api.Functions::AssemblyName"
+  handler       = "FIAP.TechChallenge.LambdaCliente.Api::FIAP.TechChallenge.LambdaCliente.Api.Function_Handler_Generated::Handler"
   # Código armazenado no S3
   s3_bucket = "code-lambdas-functions"
   s3_key    = "lambda_cliente_function.zip"
@@ -81,6 +82,6 @@ resource "aws_dynamodb_table" "cliente_table" {
   }
 
   tags = {
-    Team = "Grupo12TechChallengeCliente"
+    Team = "Grupo12TechChallenge"
   }
 }

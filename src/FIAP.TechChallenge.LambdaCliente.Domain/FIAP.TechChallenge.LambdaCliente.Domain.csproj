@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.7.403.6" />
+	 <PackageReference Include="coverlet.collector" Version="6.0.0" />
   </ItemGroup>
 
 </Project>

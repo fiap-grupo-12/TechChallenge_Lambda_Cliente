@@ -38,6 +38,7 @@ namespace FIAP.TechChallenge.LambdaCliente.UnitTests.UseCases
             Assert.NotNull(result);
             result.Count.Should().Be(2);
             result.Should().BeEquivalentTo(clienteMock);
+            _clienteRepositoryMock.Verify(it => it.GetAll(), Times.Once);
         }
     }
 }

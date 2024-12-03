@@ -1,6 +1,7 @@
 ﻿using Amazon.DynamoDBv2.DataModel;
 using FIAP.TechChallenge.LambdaCliente.Domain.Entities;
 using FIAP.TechChallenge.LambdaCliente.Domain.Repositories;
+using System.Diagnostics.CodeAnalysis;
 
 namespace FIAP.TechChallenge.LambdaCliente.Infra.Repositories;
 

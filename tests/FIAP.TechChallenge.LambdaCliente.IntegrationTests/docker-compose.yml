@@ -1,8 +1,0 @@
-﻿version: "3.8"
-
-services:
-  dynamodb-local:
-    build: .
-    ports:
-      - "8000:8000"
-    command: -jar DynamoDBLocal.jar -inMemory -sharedDb

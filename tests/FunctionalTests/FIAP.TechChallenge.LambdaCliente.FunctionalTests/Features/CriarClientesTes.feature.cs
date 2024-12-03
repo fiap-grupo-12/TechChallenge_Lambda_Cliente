@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace FIAP.TechChallenge.LambdaCliente.IntegrationTests.Features
+namespace FIAP.TechChallenge.LambdaCliente.FunctionalTests.Features
 {
     using TechTalk.SpecFlow;
     using System;
@@ -19,7 +19,7 @@ namespace FIAP.TechChallenge.LambdaCliente.IntegrationTests.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class BuscarClienteFeature : object, Xunit.IClassFixture<BuscarClienteFeature.FixtureData>, System.IDisposable
+    public partial class CriarClienteFeature : object, Xunit.IClassFixture<CriarClienteFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -28,10 +28,10 @@ namespace FIAP.TechChallenge.LambdaCliente.IntegrationTests.Features
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
-#line 1 "BuscarClientes.feature"
+#line 1 "CriarClientesTes.feature"
 #line hidden
         
-        public BuscarClienteFeature(BuscarClienteFeature.FixtureData fixtureData, FIAP_TechChallenge_LambdaCliente_IntegrationTests_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public CriarClienteFeature(CriarClienteFeature.FixtureData fixtureData, FIAP_TechChallenge_LambdaCliente_FunctionalTests_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
@@ -40,7 +40,7 @@ namespace FIAP.TechChallenge.LambdaCliente.IntegrationTests.Features
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("pt-br"), "features", "Buscar cliente", null, ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("pt-br"), "Features", "Criar cliente", null, ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -80,16 +80,16 @@ namespace FIAP.TechChallenge.LambdaCliente.IntegrationTests.Features
             this.TestTearDown();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="01 - Buscar cliente por cpf")]
-        [Xunit.TraitAttribute("FeatureTitle", "Buscar cliente")]
-        [Xunit.TraitAttribute("Description", "01 - Buscar cliente por cpf")]
+        [Xunit.SkippableFactAttribute(DisplayName="01 - Criar novo cliente")]
+        [Xunit.TraitAttribute("FeatureTitle", "Criar cliente")]
+        [Xunit.TraitAttribute("Description", "01 - Criar novo cliente")]
         [Xunit.TraitAttribute("Category", "success")]
-        public void _01_BuscarClientePorCpf()
+        public void _01_CriarNovoCliente()
         {
             string[] tagsOfScenario = new string[] {
                     "success"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("01 - Buscar cliente por cpf", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("01 - Criar novo cliente", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 6
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -101,13 +101,13 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 7
- testRunner.Given("que um cliente com CPF \"12345678900\" está cadastrado no DynamoDB", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dado ");
+ testRunner.Given("que eu tenha um \"10226748979\", \"Joao\" e \"teste\" válidos", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dado ");
 #line hidden
 #line 8
- testRunner.When("eu faço uma requisição GET para \"/cliente/12345678900\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Quando ");
+    testRunner.When("eu executar o CriarClienteUseCase", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Quando ");
 #line hidden
 #line 9
- testRunner.Then("o status da resposta deve ser 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Entao ");
+    testRunner.Then("o cliente deve ser salvo e retornar cliente com o nome \"Joao\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Então ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -120,12 +120,12 @@ this.ScenarioInitialize(scenarioInfo);
             
             public FixtureData()
             {
-                BuscarClienteFeature.FeatureSetup();
+                CriarClienteFeature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                BuscarClienteFeature.FeatureTearDown();
+                CriarClienteFeature.FeatureTearDown();
             }
         }
     }

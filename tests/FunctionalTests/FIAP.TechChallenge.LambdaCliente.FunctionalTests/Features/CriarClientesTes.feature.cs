@@ -101,10 +101,11 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 7
- testRunner.Given("que eu tenha um \"10226748979\", \"Joao\" e \"teste\" válidos", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dado ");
+ testRunner.Given("que eu tenha um cliente com os dados de cpf \"10226748979\", nome \"Joao\" e email \"t" +
+                        "este\" válidos", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dado ");
 #line hidden
 #line 8
-    testRunner.When("eu executar o CriarClienteUseCase", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Quando ");
+    testRunner.When("eu executar a api de criacao de clientes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Quando ");
 #line hidden
 #line 9
     testRunner.Then("o cliente deve ser salvo e retornar cliente com o nome \"Joao\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Então ");

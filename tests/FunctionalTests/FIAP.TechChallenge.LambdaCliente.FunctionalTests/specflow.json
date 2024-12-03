@@ -4,5 +4,9 @@
 	},
 	"language": {
 		"feature": "pt-br"
+	},
+	"livingDoc": {
+		"enabled": true,
+		"outputPath": "LivingDocOutput"
 	}
 }

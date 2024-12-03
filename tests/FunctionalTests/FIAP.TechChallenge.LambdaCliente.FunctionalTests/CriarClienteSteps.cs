@@ -26,7 +26,7 @@ namespace FIAP.TechChallenge.LambdaCliente.FunctionalTests.Steps
             _mockMapper = new Mock<IMapper>();
         }
 
-        [Given(@"que eu tenha um ""(.*)"", ""(.*)"" e ""(.*)"" válidos")]
+        [Given(@"que eu tenha um cliente com os dados de cpf ""(.*)"", nome ""(.*)"" e email ""(.*)"" válidos")]
         public void DadoQueEuTenhaUmCPFNomeEEmailValidos(string cpf, string nome, string email)
         {
             _input = new CriarClienteInput
@@ -51,7 +51,7 @@ namespace FIAP.TechChallenge.LambdaCliente.FunctionalTests.Steps
             _useCase = new CriarClienteUseCase(_mockRepository.Object, _mockMapper.Object);
         }
 
-        [When(@"eu executar o CriarClienteUseCase")]
+        [When(@"eu executar a api de criacao de clientes")]
         public async Task QuandoEuExecutarOCriarClienteUseCase()
         {
             _response = await _useCase.Execute(_input);

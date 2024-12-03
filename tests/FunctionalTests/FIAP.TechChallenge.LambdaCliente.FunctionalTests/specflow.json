@@ -1,0 +1,12 @@
+﻿{
+	"bindingCulture": {
+		"name": "pt-br"
+	},
+	"language": {
+		"feature": "pt-br"
+	},
+	"livingDoc": {
+		"enabled": true,
+		"outputPath": "LivingDocOutput"
+	}
+}

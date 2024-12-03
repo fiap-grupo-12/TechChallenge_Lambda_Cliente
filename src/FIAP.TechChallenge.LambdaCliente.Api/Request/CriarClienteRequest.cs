@@ -5,7 +5,6 @@ using System.Text.Json.Serialization;
 
 namespace FIAP.TechChallenge.LambdaCliente.Api.Request
 {
-    [ExcludeFromCodeCoverage]
     public class CriarClienteRequest
     {
         [Required(ErrorMessage = "É obrigatório informar o nome.")]

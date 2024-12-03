@@ -27,7 +27,7 @@ namespace FIAP.TechChallenge.LambdaCliente.UnitTests.UseCases
         [Fact]
         public async void ObterTodosOsClientes_WithSuccess()
         {
-            var cliente = new CriarClienteRequest
+            var request = new CriarClienteRequest
             {
                 Nome = "Client Teste",
                 CPF = "10927749041",
@@ -44,10 +44,13 @@ namespace FIAP.TechChallenge.LambdaCliente.UnitTests.UseCases
 
             var useCase = new CriarClienteUseCase(_clienteRepositoryMock.Object, _mapper);
 
-            var result = await useCase.Execute(cliente.ToInput());
+            var input = request.ToInput();
+            var result = await useCase.Execute(input);
 
+            request.Should().BeEquivalentTo(input);
             Assert.NotNull(result);
             result.Should().BeEquivalentTo(clienteResponse);
+            _clienteRepositoryMock.Verify(it => it.Post(It.IsAny<Cliente>()), Times.Once);
         }
     }
 }

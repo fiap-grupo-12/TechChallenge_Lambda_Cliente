@@ -12,7 +12,6 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace FIAP.TechChallenge.LambdaCliente.Api;
 
-[ExcludeFromCodeCoverage]
 public class Function(ICriarClienteUseCase criarClienteUseCase,
     IObterClientesUseCase obterClienteUseCase,
     IObterClientePorCpfUseCase obterClientePorCpfUseCase)

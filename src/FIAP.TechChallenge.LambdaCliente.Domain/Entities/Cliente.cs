@@ -3,7 +3,6 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace FIAP.TechChallenge.LambdaCliente.Domain.Entities;
 
-[ExcludeFromCodeCoverage]
 [DynamoDBTable("ClienteTable")]
 public class Cliente
 {

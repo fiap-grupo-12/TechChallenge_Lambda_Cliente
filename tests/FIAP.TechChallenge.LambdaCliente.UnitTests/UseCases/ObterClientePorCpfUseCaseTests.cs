@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using FIAP.TechChallenge.LambdaCliente.Application.UseCases;
 using FIAP.TechChallenge.LambdaCliente.Application.UseCases.Interfaces;
+using FIAP.TechChallenge.LambdaCliente.Domain.Entities;
 using FIAP.TechChallenge.LambdaCliente.Domain.Repositories;
 using FIAP.TechChallenge.LambdaCliente.Infra.Configurations;
 using FIAP.TechChallenge.LambdaCliente.UnitTests.Resources;
@@ -39,5 +40,6 @@ public class ObterClientePorCpfUseCaseTests
 
         Assert.NotNull(result);
         result.Should().BeEquivalentTo(clienteMock[1]);
+        _clienteRepositoryMock.Verify(it => it.GetByCpf(It.IsAny<string>()), Times.Once);
     }
 }
